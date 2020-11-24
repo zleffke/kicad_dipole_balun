@@ -1,0 +1,199 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Dipole Balun - Version 1"
+Date "2020-11-23"
+Rev "-"
+Comp "Amateur Radio"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L Transformer:ADT1.5-122 TR1
+U 1 1 5FBC788E
+P 8150 4650
+F 0 "TR1" H 8150 4931 50  0000 C CNN
+F 1 "ADT1.5-122" H 8150 4840 50  0000 C CNN
+F 2 "minicircuits_footprints:Mini-Circuits_CD542_H2.84mm" H 8150 4250 50  0001 C CNN
+F 3 "https://www.minicircuits.com/pdfs/ADT1.5-122+.pdf" V 8000 4650 50  0001 C CNN
+	1    8150 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5FBC87B2
+P 7650 4050
+F 0 "H2" H 7750 4099 50  0000 L CNN
+F 1 "active" H 7750 4008 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 7650 4050 50  0001 C CNN
+F 3 "~" H 7650 4050 50  0001 C CNN
+	1    7650 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5FBC8BF2
+P 7150 4050
+F 0 "H1" H 7250 4099 50  0000 L CNN
+F 1 "active" H 7250 4008 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 7150 4050 50  0001 C CNN
+F 3 "~" H 7150 4050 50  0001 C CNN
+	1    7150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5FBC98E7
+P 7150 5250
+F 0 "H3" H 7050 5207 50  0000 R CNN
+F 1 "radial" H 7050 5298 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 7150 5250 50  0001 C CNN
+F 3 "~" H 7150 5250 50  0001 C CNN
+	1    7150 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5FBC9BCD
+P 7650 5250
+F 0 "H4" H 7550 5207 50  0000 R CNN
+F 1 "radial" H 7550 5298 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 7650 5250 50  0001 C CNN
+F 3 "~" H 7650 5250 50  0001 C CNN
+	1    7650 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FBCE9EA
+P 8850 4950
+F 0 "#PWR01" H 8850 4700 50  0001 C CNN
+F 1 "GND" H 8855 4777 50  0000 C CNN
+F 2 "" H 8850 4950 50  0001 C CNN
+F 3 "" H 8850 4950 50  0001 C CNN
+	1    8850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5FBCFA6C
+P 9350 4550
+F 0 "J1" H 9450 4525 50  0000 L CNN
+F 1 "SMA THT" H 9450 4434 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 9350 4550 50  0001 C CNN
+F 3 " ~" H 9350 4550 50  0001 C CNN
+	1    9350 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FBD0C58
+P 9350 4950
+F 0 "#PWR02" H 9350 4700 50  0001 C CNN
+F 1 "GND" H 9355 4777 50  0000 C CNN
+F 2 "" H 9350 4950 50  0001 C CNN
+F 3 "" H 9350 4950 50  0001 C CNN
+	1    9350 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 4550 7650 4150
+Wire Wire Line
+	7650 4150 7150 4150
+Connection ~ 7650 4150
+Wire Wire Line
+	7150 5150 7650 5150
+Wire Wire Line
+	7650 5150 7650 4750
+Connection ~ 7650 5150
+Wire Wire Line
+	8650 4750 8850 4750
+Wire Wire Line
+	8850 4750 8850 4950
+Wire Wire Line
+	8650 4550 9000 4550
+Wire Wire Line
+	9350 4750 9350 4950
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5FBD6F54
+P 9350 4000
+F 0 "J2" H 9450 3975 50  0000 L CNN
+F 1 "SMA EDGE" H 9450 3884 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 9350 4000 50  0001 C CNN
+F 3 " ~" H 9350 4000 50  0001 C CNN
+	1    9350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4000 9000 4000
+Wire Wire Line
+	9000 4000 9000 4550
+Connection ~ 9000 4550
+Wire Wire Line
+	9000 4550 9150 4550
+$Comp
+L power:GND #PWR03
+U 1 1 5FBD7D32
+P 9350 4200
+F 0 "#PWR03" H 9350 3950 50  0001 C CNN
+F 1 "GND" H 9355 4027 50  0000 C CNN
+F 2 "" H 9350 4200 50  0001 C CNN
+F 3 "" H 9350 4200 50  0001 C CNN
+	1    9350 4200
+	1    0    0    -1  
+$EndComp
+Text Label 7650 4300 0    50   ~ 0
+active
+Text Label 7650 5000 0    50   ~ 0
+radial
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5FBE58DC
+P 8150 5650
+F 0 "H5" H 8250 5696 50  0000 L CNN
+F 1 "MountingHole" H 8250 5605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8150 5650 50  0001 C CNN
+F 3 "~" H 8150 5650 50  0001 C CNN
+	1    8150 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5FBE6D06
+P 8150 5900
+F 0 "H6" H 8250 5946 50  0000 L CNN
+F 1 "MountingHole" H 8250 5855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8150 5900 50  0001 C CNN
+F 3 "~" H 8150 5900 50  0001 C CNN
+	1    8150 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H7
+U 1 1 5FBEF56F
+P 8150 6150
+F 0 "H7" H 8250 6196 50  0000 L CNN
+F 1 "MountingHole" H 8250 6105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8150 6150 50  0001 C CNN
+F 3 "~" H 8150 6150 50  0001 C CNN
+	1    8150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H8
+U 1 1 5FBEF9C8
+P 8150 6400
+F 0 "H8" H 8250 6446 50  0000 L CNN
+F 1 "MountingHole" H 8250 6355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8150 6400 50  0001 C CNN
+F 3 "~" H 8150 6400 50  0001 C CNN
+	1    8150 6400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
